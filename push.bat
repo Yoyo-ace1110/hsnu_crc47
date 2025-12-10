@@ -33,7 +33,7 @@ if "%commit_msg%"=="" (
 :: 執行提交
 git commit -m "%commit_msg%"
 
-:: Git commit 在沒有變更時會返回非零代碼，這不是真正的錯誤，需要特別處理
+:: 處理 Git commit 在沒有變更時返回代碼的狀況
 if errorlevel 1 (
     git status | findstr /i "nothing to commit"
     if not errorlevel 1 (
@@ -66,4 +66,3 @@ if errorlevel 1 (
 )
 
 :eof
-pause
