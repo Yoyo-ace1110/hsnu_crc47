@@ -15,6 +15,6 @@ animate(chars, {
   },
   delay: stagger(50),
   ease: 'inOutCirc',
-  loopDelay: 1000,
+  loopDelay: 500,
   loop: true
 });
