@@ -16,17 +16,17 @@ echo [1/3] 執行 git add . (暫存所有變更)
 git add .
 if errorlevel 1 (
     echo.
-    echo ❌ 錯誤: git add 失敗。請檢查專案狀態。
+    echo ❌ 錯誤: git add 失敗
     goto :eof
 )
 echo.
 
 :: 執行 git commit -m
 echo [2/3] 執行 git commit
-:: 檢查提交訊息是否為空
+:: 檢查訊息是否為空
 if "%commit_msg%"=="" (
     echo.
-    echo ⚠️ 警告: 提交訊息為空，使用預設訊息 "Auto commit"
+    echo ⚠️ 警告: 使用預設訊息 "Auto commit"
     set commit_msg=Auto commit
 )
 
